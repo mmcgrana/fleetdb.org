@@ -1,0 +1,13 @@
+---
+layout: page
+title: ": Blog"
+blog_tab: true
+---
+
+<p>{{ site.posts.first.title }}</p>
+
+<ul class="links">
+{% for post in site.posts offset:1 %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
