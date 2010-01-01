@@ -7,14 +7,14 @@ docs_tab: "qr"
 create-index
 ------------
 
-    [:create-index <collection> <index-spec>]
-    <0|1>
+    ["create-index", <collection>, <index-spec>]
+    => <0|1>
   
-    [:create-index <collection> :name]
-    1
+    ["create-index", "people", "name"]
+    => 1
     
-    [:create-index <collection> [:name [:age :desc]]]
-    1
+    ["create-index", "people", ["name", ["age", "desc"]]]
+    => 1
     
 Ensures that the index described by `index-spec` exists on the given collection. Returns 1 if such an index is created or 0 if it already exists.
 
@@ -22,14 +22,14 @@ Ensures that the index described by `index-spec` exists on the given collection.
 
     <attribute>
     
-    [<attribute>|[<attribute> <:asc|desc>]+]
+    [<attribute>|[<attribute>, <"asc"|"desc">]+]
 
 If an order is not given for an attribute in a multi-attribute index, it is assumed to be ascending.
 
 The following are examples of `index-specs`:
     
-    :name
+    "name"
     
-    [:name [:age :desc]]
+    ["name", ["age", "desc"]]
     
-    [[:name :desc] [:age :asc]]
+    [["name", "desc"] ["age", "asc"]]

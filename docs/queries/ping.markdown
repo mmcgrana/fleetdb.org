@@ -7,7 +7,7 @@ docs_tab: "qr"
 ping
 ----
 
-    [:ping]
-    :pong
+    ["ping"]
+    => "pong"
 
-Returns `:pong` if the server is alive.
+Returns `"pong"` if the server is alive.

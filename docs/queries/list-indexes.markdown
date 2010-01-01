@@ -7,11 +7,11 @@ docs_tab: "qr"
 list-indexes
 ------------
 
-    [:list-indexes <collection>]
-    <index-specs>
+    ["list-indexes", <collection>]
+    => <index-specs>
 
-    [:list-indexes :people]
-    [:name :age]
+    ["list-indexes", "people"]
+    => ["name", "age"]
 
 Returns a vector of index specs indicating all indexes on the given 'collection'.
 

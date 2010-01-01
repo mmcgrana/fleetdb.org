@@ -7,7 +7,7 @@ docs_tab: "qr"
 compact
 -------
 
-    [:compact]
-    true
+    ["compact"]
+    => true
 
-Asynchronously compacts the database log file. Returns immediately.
+Initializes asynchronous compacts the database log file. Returns immediately.

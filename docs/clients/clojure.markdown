@@ -4,31 +4,29 @@ title: "Docs : Client Libraries : Clojure"
 docs_tab: "cl"
 ---
 
-Clojure
--------
+## Clojure
 
-A Clojure client library is included with the FleetDB distribution: `fleetdb.client`. 
+The FleetDB Clojure client `fleetdb-client` is available via is available via [Clojars](http://clojars.org); see the [project page](http://clojars.org/fleetdb-client) for instructions on installing with Leiningen or Maven.
 
-    => (use '(fleetdb [client :as c]))
-    => (def client (client/connect "127.0.0.1" 3400))
+Usage of the library is simple:
+ 
+    => (use 'fleetdb.client)
+    => (def client (connect "127.0.0.1" 3400))
     
-    => (c/query client [:ping])
+    => (query client ["ping"])
     "pong"
-    
-    => (c/query client [:select :accounts {:where [:= :id 2]}])
-    [{:id 2 :owner "Alice" :credits 150}]
-    
-    => (c/close client)
 
-A Clojure client library is included with the FleetDB distribution: `fleetdb.client`. 
-
-    => (use '(fleetdb [client :as c]))
-    => (def client (client/connect "127.0.0.1" 3400))
-    
-    => (c/query client ["ping"])
-    "pong"
-    
-    => (c/query client ["select" "accounts" {"where" ["=" "id" 2]}])
+    => (query client ["select" "accounts" {"where" ["=" "id" 2]}])
     [{"id" 2 "owner" "Alice" "credits" 150}]
     
-    => (c/close client)
+Keywords can be used in queries, as they are converted to strings before being sent to the server:
+
+    => (query client [:select :accounts {:where [:= :id 2]}])
+    [{"id" 2 "owner" "Alice" "credits" 150}]
+
+The client will raise an exception in the case of an error:
+
+    => (query client ["bogus"])
+    java.lang.Exception: Malformed query: unrecognized query type '"bogus"'
+
+The source for this client is available [on Github](http://github.com/mmcgrana/fleetdb-client).

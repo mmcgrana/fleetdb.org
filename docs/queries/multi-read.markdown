@@ -7,13 +7,13 @@ docs_tab: "qr"
 multi-read
 ----------
 
-    [:multi-read [<read-query>+]]
-    [<read-result>+]
+    ["multi-read", [<read-query>+]]
+    => [<read-result>+]
     
-    [:multi-read 
-      [[:count :people {:where [:= :age 30]}]
-       [:count :people {:where [:= :name "Bob"]}]]]
-    [4 1]
+    ["multi-read", 
+      [["count", "people", {"where": ["=", "age", 30]}],
+       ["count", "people", {"where": ["=", "name", "Bob"]}]]]
+    => [4 1]
 
 Executes the given read queries on a single snapshot of the database, returning a vector of their respective results.
 
