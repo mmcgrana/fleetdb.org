@@ -6,7 +6,7 @@ docs_tab: "sc"
 
 Once you have [downloaded](/docs/getting_started.html) FleetDB, you can start a server as follows:
 
-    $ java [jvm-options] -cp fleetdb-server.jar fleetdb.server [fleetdb-options]
+    $ java [jvm-options] -cp fleetdb-standalone.jar fleetdb.server [fleetdb-options]
 
 The available FleetDB options are:
 
@@ -17,10 +17,10 @@ The available FleetDB options are:
     -t <num>    Maximum number of worker threads (default: 100)                    
     -h          Print this help and exit.
 
-For example, to start a server that writes to a file at `demo.db`, use:
+For example, to start a server that writes to a file at `demo.fdb`, use:
 
-    $ java -cp fleetdb-server.jar fleetdb.server -f demo.db
+    $ java -cp fleetdb-standalone.jar fleetdb.server -f demo.fdb
 
 You may also want to specify extra JVM options. For example, to run FleetDB in a "server" mode JVM with 2 gigabytes of heap space:
     
-    $ java -server -Xmx2g -cp fleetdb-server.jar fleetdb.server -f demo.db
+    $ java -server -Xmx2g -cp fleetdb-standalone.jar fleetdb.server -f demo.fdb

@@ -15,13 +15,12 @@ The parsed response will be an array of 2 elements: a status code and response v
 Perhaps the best way to understand the protocol is to see the source for an existing implementation. For example, here is how the the [Ruby client](/docs/clients/ruby.html) implements its main `query` method:
 
     def query(q)
-      request = Yajl::Encoder.encode(q)
+      request = @json_encoder.encode(q)
       @socket.write(request)
       @socket.write("\r\n")
       response = @socket.gets
-      status, value = Yajl::Parser.parse(response)
+      status, value = @json_parser.parse(response)
       status == 0 ? value : raise(value)
     end
 
-
-
+Note that the database file produced by a FleetDB server is in exactly the same format as client queries: CLRF-separated, JSON-encoded lines representing a series of queries.

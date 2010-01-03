@@ -10,4 +10,4 @@ compact
     ["compact"]
     => true
 
-Initializes asynchronous compacts the database log file. Returns immediately.
+Initializes asynchronous, non-blocking compaction of the database log file. Returns immediately.

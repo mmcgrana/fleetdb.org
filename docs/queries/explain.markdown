@@ -14,7 +14,7 @@ explain
     => ["collection-scan", "people"]
     
     ["explain", ["select", "people", {"where": ["=", "name", "Bob"], "order": ["age", "asc"]}]]
-    => ["sort", ["age", "asc"]
+    => ["sort", ["age", "asc"],
          ["index-lookup", ["people", "name", "Bob"]]]
 
 Returns the query plan that will used by the database to execute the given `query`.

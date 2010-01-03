@@ -44,13 +44,10 @@ table {
   text-decoration: none;
 }
 
-.site a:hover {
-  text-decoration: underline;
+.site a.selected {
+  color: green;
 }
 
-.site a.selected {
-  color: #a0a;
-}
 
   .header {
     text-align: center;
@@ -92,7 +89,7 @@ table {
   .query_menu a {
     margin-right: 1em;
   }
-  
+
   .content p {
     text-align: justify;
   }
