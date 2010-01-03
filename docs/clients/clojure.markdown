@@ -11,7 +11,7 @@ The FleetDB Clojure client `fleetdb-client` is available via is available via [C
 Usage of the library is simple:
  
     => (use 'fleetdb.client)
-    => (def client (connect "127.0.0.1" 3400))
+    => (def client (connect))
     
     => (query client ["ping"])
     "pong"
@@ -24,9 +24,17 @@ Keywords can be used in queries, as they are converted to strings before being s
     => (query client [:select :accounts {:where [:= :id 2]}])
     [{"id" 2 "owner" "Alice" "credits" 150}]
 
+The client can also be used as a function that executes the given query:
+
+    => (client [:ping])
+
 The client will raise an exception in the case of an error:
 
-    => (query client ["bogus"])
+    => (client ["bogus"])
     java.lang.Exception: Malformed query: unrecognized query type '"bogus"'
+
+You can optionally specify a host and port other than the default `"127.0.0.1"` and `3400`:
+
+    (def client (connect {:host "68.127.150.103" :port 3401}))
 
 The source for this client is available [on Github](http://github.com/mmcgrana/fleetdb-client).
