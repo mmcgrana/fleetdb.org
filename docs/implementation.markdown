@@ -29,7 +29,7 @@ Each collection is grouped along with its indexes into a single map. For example
      :imap {"owner"   <owners-to-accounts>
             "credits" <credits-to-accounts}}
 
-A database is then a map of collection names to these collection maps. if a database had `"branches"` and `"accounts"` collections it could look like:
+A database is then a map of collection names to these collection maps. If a database had `"branches"` and `"accounts"` collections it could look like:
 
     {"branches" {:rmap  <ids-to-branches>
                  :imap {"city"      <city-to-branches>
@@ -38,8 +38,8 @@ A database is then a map of collection names to these collection maps. if a data
                  :imap {"owner"   <owners-to-accounts>
                         "credits" <credits-to-accounts>}}}
 
-FleetDB manages the change of a database over time according to Clojure's model of state. The data structures above correspond to a database *value*; these are immutable. A FleetDB server also maintains a single database *identity*. This identity assumes different *states* over time as the database is manipulated by users.
+FleetDB manages the change of a database over time according to Clojure's model of state. The data structures above correspond to database *values*; these are immutable. A FleetDB server also maintains a single database *identity*. This identity assumes different *states* over time as the database is manipulated by users.
 
 The separation of identity and state has important implications for the semantics and performance of the database under concurrent load. For example, to answer a read query, FleetDB dereferences the database identity to obtain the current database state - an immutable value - and computes the result of the query on that value. Read queries can therefore be answered in complete isolation, without blocking, and concurrently with any other queries.
 
-Write queries are handled differently. First, write queries are queued so that they are executed serially. When a write query reaches the head of the write queue, the database identity is dereferenced to obtain the current state. The write query then executes as a function of that state, returning a query result and a new database value. The write query is then logged to the append-only database file, the new database atomically swapped into the database identity as the current state, and finally the query result returned to the user.
+Write queries are handled differently. First, write queries are queued so that they are executed serially. When a write query reaches the head of the write queue, the database identity is dereferenced to obtain the current state. The write query then executes as a function of that state, returning a query result and a new database value. The write query is then logged to the append-only database file, the new database value atomically swapped into the database identity as the current state, and finally the query result returned to the user.

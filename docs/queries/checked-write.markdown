@@ -18,4 +18,4 @@ checked-write
 
 First, executes `read-query` and compares the result to `expected-read-result`. If the two are equal, then executes `write-query` and returns the result prefixed by `true`. If the actual and expected read results differ, does not execute `write-query` and instead returns the actual read result prefixed by `false`.
 
-`read-query` must be one of the queries listed for [multi-read](/docs/queries/multi-read.html). `write-query` must be one of [insert](/docs/queries/insert.html), [update](/docs/queries/update.html), [delete](/docs/queries/delete.html), [create-index](/docs/queries/create-index.html), [drop-index](/docs/queries/drop-index.html), or multi-write.
+`read-query` must be one of the queries listed for [multi-read](/docs/queries/multi-read.html). `write-query` must be one of [insert](/docs/queries/insert.html), [update](/docs/queries/update.html), [delete](/docs/queries/delete.html), [create-index](/docs/queries/create-index.html), [drop-index](/docs/queries/drop-index.html), or [multi-write](/docs/queries/multi-write.html).

@@ -19,7 +19,7 @@
                  {% if page.home_tab %}class="selected"{% endif %}>
             Home
           </a></li>
-          <li><a href="/docs/getting_started.html"
+          <li><a href="/docs/introduction.html"
                  {% if page.docs_tab %}class="selected"{% endif %}>
             Documentation
           </a></li>
@@ -30,9 +30,9 @@
       {% if page.docs_tab %}
       <div class="docs_menu">
         <ul>
-          <li><a href="/docs/getting_started.html"
-                 {% if page.docs_tab == "gs" %}class="selected"{% endif %}>
-            Getting Started
+          <li><a href="/docs/introduction.html"
+                 {% if page.docs_tab == "in" %}class="selected"{% endif %}>
+            Introduction
           </a></li>
           <li><a href="/docs/queries.html"
                  {% if page.docs_tab == "qr" %}class="selected"{% endif %}>
@@ -42,7 +42,7 @@
                  {% if page.docs_tab == "cl" %}class="selected"{% endif %}>
             Client Libraries
           </a></li>
-          <li><a href="/docs/server_cli.html"
+          <li><a href="/docs/server.html"
                  {% if page.docs_tab == "sc" %}class="selected"{% endif %}>
             Server CLI
           </a></li>

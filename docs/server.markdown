@@ -4,7 +4,7 @@ title: "Docs : Server CLI"
 docs_tab: "sc"
 ---
 
-Once you have [downloaded](/docs/getting_started.html) FleetDB, you can start a server as follows:
+Once you have [downloaded](/docs/introduction.html) FleetDB, you can start a server as follows:
 
     $ java [jvm-options] -cp fleetdb-standalone.jar fleetdb.server [fleetdb-options]
 

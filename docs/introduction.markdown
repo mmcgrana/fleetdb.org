@@ -1,14 +1,14 @@
 ---
 layout: page
-title: "Docs : Getting Started"
-docs_tab: "gs"
+title: "Docs : Introduction"
+docs_tab: "in"
 ---
 
-First, download FleetDB:
+FleetDB is available as a single JAR file:
 
     $ wget http://cloud.github.com/downloads/mmcgrana/fleetdb/fleetdb-standalone.jar
 
-Then start a server:
+Use that file to start a FleetDB server:
 
     $ java -cp fleetdb-standalone.jar fleetdb.server -f demo.fdb
 
@@ -20,8 +20,6 @@ At the telnet prompt, type `["ping"]` and hit return. This will send a ping quer
 
     ["ping"]
     [0, "pong"]
-
-The response is a pair of elements: the first element is a status code of 0 to indicate success and the second element is the query result.
 
 Typically you will access FleetDB using a client in your programming language of choice. We will demonstrate the FleetDB queries using the [Clojure client](/docs/clients/clojure.html), but the form of the queries will be the same when using clients in [other languages](/docs/clients.html).
 
@@ -168,4 +166,4 @@ To remove a collection, drop its indexes (which we did above) and delete all of 
     (client ["list-collections"])
     => []
 
-You now know the basics of FleetDB! Check out the [Query Reference](/docs/queries.html), [Client Libraries](/docs/clients.html), and  [Server CLI](/docs/server_cli.html) pages to learn more.
+You now know the basics of FleetDB! Check out the [Query Reference](/docs/queries.html), [Client Libraries](/docs/clients.html), and  [Server CLI](/docs/server.html) pages to learn more.
