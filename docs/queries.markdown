@@ -7,9 +7,10 @@ docs_tab: "qr"
 Select a query below to see detailed documentation:
 
  * [ping](/docs/queries/ping.html)
- * [insert](/docs/queries/insert.html)
  * [select](/docs/queries/select.html)
  * [count](/docs/queries/count.html) 
+ * [insert](/docs/queries/insert.html)
+ * [update](/docs/queries/update.html)
  * [delete](/docs/queries/delete.html)
  * [create-index](/docs/queries/create-index.html)
  * [drop-index](/docs/queries/drop-index.html)
