@@ -8,6 +8,7 @@ Select a language below to see detailed documentation for its client library:
 
  * [Clojure](/docs/clients/clojure.html)
  * [Ruby](/docs/clients/ruby.html)
+ * [Python](http://github.com/mattc58/fleetdb-python)
  * [Node.js](http://github.com/jfd/node-fleet)
  * [Perl](http://search.cpan.org/dist/Net-FleetDB/)
 
