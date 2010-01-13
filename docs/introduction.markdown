@@ -6,7 +6,7 @@ docs_tab: "in"
 
 FleetDB is available as a single JAR file:
 
-    $ wget http://cloud.github.com/downloads/mmcgrana/fleetdb/fleetdb-standalone.jar
+    $ wget http://s3.amazonaws.com/fleetdb/fleetdb-standalone.jar
 
 Use that file to start a FleetDB server:
 
