@@ -21,7 +21,7 @@ At the telnet prompt, type `["ping"]` and hit return. This will send a ping quer
     ["ping"]
     [0, "pong"]
 
-Typically you will access FleetDB using a client in your programming language of choice. We will demonstrate the FleetDB queries using the [Clojure client](/docs/clients/clojure.html), but the form of the queries will be the same when using clients in [other languages](/docs/clients.html).
+Typically you will access FleetDB using a client in your programming language of choice. We will demonstrate the FleetDB queries using the [Clojure client](http://github.com/mmcgrana/fleetdb-client), but the form of the queries will be the same when using clients in [other languages](/docs/clients.html).
 
 To connect the client to the database:
 
