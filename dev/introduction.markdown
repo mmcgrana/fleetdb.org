@@ -3,7 +3,7 @@ layout: page
 dev_tab: true
 ---
 
-The [FleetDB source](http://github.com/mmcgrana/fleetdb) and [issue tracker](http://github.com/mmcgrana/fleetdb/issues) are hosted on GitHub.
+The [FleetDB source](http://github.com/mmcgrana/fleetdb) and [issue tracker](http://github.com/mmcgrana/fleetdb/issues) are hosted on GitHub. Discussions take place on the [FleetDB Google Group](http://groups.google.com/group/fleetdb).
 
 To get started with developing FleetDB, first ensure that you have [Git](http://git-scm.com/) and [Leiningen](http://github.com/technomancy/leiningen) installed. Then clone the FleetDB repository, pull in the dependencies, compile the project, and run the tests as follows:
 
