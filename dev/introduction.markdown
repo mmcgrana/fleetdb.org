@@ -14,8 +14,7 @@ To get started with developing FleetDB, first ensure that you have [Git](http://
 
 The above assumes a `clj` script that adds the `src` and `test` directories and the `lib/*.jar` files to your classpath. Your local setup may be different.
 
-To fully test the server daemon as a standalone process, execute the following in three separate shells:
+To fully test the server daemon as a standalone process, execute the following:
 
-    $ java -cp fleetdb-standalone.jar fleetdb.server -e -p 3400
-    $ java -cp fleetdb-standalone.jar fleetdb.server -e -p 3401 -x pass
+    $ lein uberjar
     $ clj test/run.clj
