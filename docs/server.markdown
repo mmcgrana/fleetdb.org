@@ -14,7 +14,9 @@ The available FleetDB options are:
     -e          Ephemeral: do not log changes to disk                              
     -p <port>   TCP port to listen on (default: 3400)                              
     -a <addr>   Local address to listen on (default: 127.0.0.1)                    
-    -t <num>    Maximum number of worker threads (default: 100)                    
+    -t <num>    Maximum number of worker threads (default: 100)  
+    -x <pass>   Require clients to authenticate                  
+    -v          Print the FleetDB version and exit.
     -h          Print this help and exit.
 
 For example, to start a server that writes to a file at `demo.fdb`, use:
