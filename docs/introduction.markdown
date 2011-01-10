@@ -48,7 +48,7 @@ To insert 3 records at the same time:
                {"id" 4, "owner" "Amy", "credits" 1000, "vip" true}]])
     => 3
 
-Records can have arbitrary attribute names and values that are numbers, keywords, strings, booleans, or nil. The only requirement is that each record have a unique `id`.
+Records can have arbitrary attribute names and values that are numbers, strings, booleans, or nil. The only requirement is that each record have a unique `id`.
 
 You can use `select` to retrieve records. To get a single record by `id`:
 
