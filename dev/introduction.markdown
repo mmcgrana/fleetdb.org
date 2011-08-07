@@ -9,7 +9,7 @@ To get started with developing FleetDB, first ensure that you have [Git](http://
 
     $ git clone git://github.com/mmcgrana/fleetdb.git
     $ lein deps
-    $ lein compile-java
+    $ lein compile
     $ clj test/run.clj --no-server
 
 The above assumes a `clj` script that adds the `src` and `test` directories and the `lib/*.jar` files to your classpath. Your local setup may be different.
